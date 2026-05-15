@@ -11,6 +11,10 @@ const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Backend API Running");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/task", taskRoutes);
 
